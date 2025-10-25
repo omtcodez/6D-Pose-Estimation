@@ -172,7 +172,8 @@ Our final implementation is approximately 85% faithful to the paper's architectu
 
 The following table highlights the dramatic impact of our optimizations on the challenging occluded dataset:
 
-MetricInitial ImplementationFinal Enhanced ImplementationImprovement**Best ADD-5cm Accuracy**8.07%**40.67%+404%Final ADD-10cm Accuracy**N/A**78.41%**\-**Training Loss Reduction**N/A**\-85.7%**\-**Total Training Time**~33.5 min (for 30 epochs)**33.6 minutes (for 50 epochs)**Faster Convergence**Result vs. SOTA**Underperforming**Competitive**\-
+<img width="1650" height="448" alt="image" src="https://github.com/user-attachments/assets/54452866-0024-4582-b7c9-ab404b403bee" />
+
 
 **Analysis**
 
