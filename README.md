@@ -16,7 +16,9 @@ The project adheres to the core principles of the paper, leveraging a Transforme
 
 These implementations validate the paper's core approach and demonstrate the robustness of the multi-modal fusion concept across different levels of data complexity.
 
-**Original Research Paper:** (https://drive.google.com/file/d/1IMEfQjTUTXqiPvKLmJ8VghkrjQc8rCGZ/view?usp=sharing)
+**Original Research Paper:** 
+
+(https://drive.google.com/file/d/1IMEfQjTUTXqiPvKLmJ8VghkrjQc8rCGZ/view?usp=sharing)
 
 *   **Title:** A Transformer-based multi-modal fusion network for 6D pose estimation 
     
@@ -77,7 +79,8 @@ This section details the implementation, architecture, and results for the 'Ape'
 
 The following table details the architectural changes and the rationale behind them for this specific implementation.
 
-ComponentPaper's ApproachOur Implemented ApproachJustification for Changes (Computational Constraints)**RGB Feature Extraction**CNN + Vision Transformer (ViT)ResNet18 single backboneThe dual backbone was too memory-intensive. ResNet provides a proven, powerful feature extractor within VRAM limits.**Point Cloud Encoder**PointNet-style hierarchical networkSimple MLPA multi-layer perceptron offers a lighter-weight alternative, reducing complexity and training time.**Fusion Mechanism**Cross-modal attentionTransformer on concatenated featuresConcatenation followed by a standard Transformer is a memory-efficient alternative that still allows features to interact effectively.**Rotation Representation**6D rotation representation6D rotation representationIdentical to paper. This is a proven, stable method for representing rotations in deep learning models.**Pose Prediction**Per-point voting & confidenceGlobal feature predictionPredicting one pose from aggregated global features drastically reduces memory usage, making training feasible.**Training Strategy**End-to-end + Iterative RefinementEnd-to-end onlyThe refinement stage was omitted to keep training time within the project's scope, demonstrating the strength of the core model.**Dataset Usage**Full LINEMOD datasetSingle 'Ape' object from LINEMODFocusing on one object allowed for rapid iteration and thorough validation of the methodology.
+<img width="982" height="493" alt="Screenshot 2025-10-25 at 12 49 50 PM" src="https://github.com/user-attachments/assets/b6e9f103-e33a-48f7-816f-3a3513b2bcaf" />
+
 
 ### 4.2. Key Achievements & Results
 
@@ -141,8 +144,10 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 **Dataset Setup**
 
 1.  Download the **Linemod\_preprocessed** dataset.
+
+2.  https://drive.google.com/drive/folders/1XQFjyYPLl2xmiicOIEVW_vD3aZHg611G?usp=sharing
     
-2.  code Codedownloadcontent\_copyexpand\_less .├── Linemod\_preprocessed/│ ├── data/│ └── models/├── Linemod\_Final.ipynb└── README.md
+4.  code Codedownloadcontent\_copyexpand\_less .├── Linemod\_preprocessed/│ ├── data/│ └── models/├── Linemod\_Final.ipynb└── README.md
     
 
 **Instructions to Run**
@@ -163,7 +168,8 @@ This section details the implementation, architecture, and results for the 'Ape'
 
 Our final implementation is approximately 85% faithful to the paper's architecture. We maintained the core innovation—Transformer-based fusion—while adapting the feature extraction backbone for feasibility.
 
-ComponentPaper's ApproachOur Implemented ApproachJustification for Changes (Computational Constraints)**RGB Feature Extraction**CNN + Vision Transformer (ViT)ResNet18 + Transformer EncodersA full ViT backbone is too memory- and compute-intensive for Colab. Our hybrid approach balances powerful feature extraction with efficiency, staying true to the Transformer concept.**Fusion Mechanism**Cross-modal AttentionTransformer on Concatenated FeaturesConcatenation followed by a Transformer is a memory-efficient alternative that still allows features from both modalities to interact and fuse effectively.**Loss Function**Average Distance (ADD)Symmetry-Aware ADD-S LossThe 'ape' object is symmetric. ADD-S loss is crucial for stable training as it correctly handles symmetrically ambiguous poses.**Training Strategy**Standard TrainingAdvanced LR Scheduling & AugmentationWe introduced a Cosine Annealing LR scheduler and more aggressive data augmentations to accelerate convergence and improve robustness.
+<img width="853" height="391" alt="Screenshot 2025-10-25 at 12 49 28 PM" src="https://github.com/user-attachments/assets/d515f53d-c8f2-4912-a3d8-826f45310240" />
+
 
 ### 5.2. Key Achievements & Results
 
