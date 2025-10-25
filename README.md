@@ -137,9 +137,7 @@ Our implemented model, despite its simplifications, achieved an **ADD-5cm accura
 
 **Prerequisites**
 
-code Bashdownloadcontent\_copyexpand\_less
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML    `pip install torch torchvision timm open3d opencv-python pyyaml numpy matplotlib seaborn`  
+`pip install torch torchvision timm open3d opencv-python pyyaml numpy matplotlib seaborn`  
 
 **Dataset Setup**
 
@@ -147,9 +145,6 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 2.  https://drive.google.com/drive/folders/1XQFjyYPLl2xmiicOIEVW_vD3aZHg611G?usp=sharing
     
-4.  code Codedownloadcontent\_copyexpand\_less .├── Linemod\_preprocessed/│ ├── data/│ └── models/├── Linemod\_Final.ipynb└── README.md
-    
-
 **Instructions to Run**
 
 1.  **Open Notebook:** Open Linemod\_Final.ipynb in a Jupyter environment like Google Colab.
@@ -200,16 +195,14 @@ MetricInitial ImplementationFinal Enhanced ImplementationImprovement**Best ADD-5
 
 **Prerequisites**
 
-code Bashdownloadcontent\_copyexpand\_less
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML    `pip install torch torchvision timm open3d opencv-python pyyaml numpy matplotlib seaborn pandas`  
+`pip install torch torchvision timm open3d opencv-python pyyaml numpy matplotlib seaborn pandas`  
 
 **Dataset Setup**
 
 1.  Download the **Occlusion LINEMOD** dataset.
-    
-2.  code Codedownloadcontent\_copyexpand\_less /content/drive/My Drive/Occlusion\_Project/├── OCCLUSION\_LINEMOD/│ ├── data/│ └── models/└── ...
-    
+
+2.  https://drive.google.com/drive/folders/1aIV4rxBXJqVe234dUsmXBUweBVA_8fwp?usp=sharing,  (for models) https://drive.google.com/drive/folders/1taBsJ5QmaSvgs67LnFMa72BxRGt4sO39?usp=sharing
+       
 
 **Instructions to Run**
 
